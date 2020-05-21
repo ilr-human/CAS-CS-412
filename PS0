@@ -1,0 +1,73 @@
+Introduction Sequence: 
+
+A nicely paced introduction to the majority of git commands
+
+1: Introduction to Git Commits
+
+1) $ delay 2000
+   $ show goal
+   $ git commit
+   $ git commit
+   
+2) $ delay 2000
+   $ show goal
+   $ git checkout -b bugFix
+   
+3) $ delay 2000
+   $ show goal
+   $ git checkout -b bugFix
+   $ git commit
+   $ git checkout master
+   $ git commit
+   $ git merge bugFix
+   
+4) $ delay 2000
+   $ show goal
+   $ git checkout -b bugFix
+   $ git commit
+   $ git checkout master
+   $ git commit
+   $ git checkout bugFix
+   $ git rebase master
+   
+Ramping Up:
+
+The next serving of 100% git awesomes-ness. Hope you're hungry
+
+4: Reversing Changes in Git
+
+1) $ delay 2000
+   $ show goal
+   $ git checkout c4
+   
+2) $ delay 2000
+   $ show goal
+   $ git checkout bugFix^
+   
+3) $ delay 2000
+   $ show goal
+   $ git branch -f bugFix HEAD~2
+   $ git branch -f master c6
+   $ git checkout c1
+   
+4) $ delay 2000
+   $ show goal
+   $ git reset HEAD~
+   $ git checkout pushed
+   $ git revert HEAD
+   
+Moving Work Around:
+
+"Git" comfortable with modifying the source tree :P
+
+1: Cherry-pick Intro
+
+1) $ delay 2000
+   $ show goal
+   $ git cherry-pick C3 C4 C7
+   
+2) $ delay 2000
+   $ show goal
+   $ git rebase -i HEAD~4
+   //On the dialogue window I omited C2 and switched the order of C4 and C5
+   
