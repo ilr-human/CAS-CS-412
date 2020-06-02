@@ -1,8 +1,8 @@
 const splitter = (str, func) => func(str);
 
-const splitC = (str) => str.split(/(?=c)/g);
+const lambda1 = (str) => str.split(/(?=c)/g);
 
-const a = (str) => {
+const lambda2 = (str) => {
     console.log(`originalString: ${str}`);
     const modifiedString = str.replace(/a/g, 'A');
     console.log(`modifiedString: ${modifiedString}`)
@@ -16,4 +16,4 @@ const a = (str) => {
     console.log(`length: ${str.length}`)
 }
 
-module.exports = {splitter, a, splitC};
+module.exports = {splitter, lambda1, lambda2};
