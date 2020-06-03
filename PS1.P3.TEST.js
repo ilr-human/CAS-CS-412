@@ -10,6 +10,9 @@ describe('PS1.P3 TEST', () => {
     });
     it(`should return the originalString, modifiedString, numberReplaces, length`, function(){
         let split2 = splitter('supercalifragilisticexpialidocious', lambda2);
-        expect(split2).to.have.lengthOf(4);
+        expect(split2).to.have.property('originalString').with.lengthOf(34);
+        expect(split2).to.have.property('modifiedString').with.lengthOf(34);
+        expect(split2).to.have.property('numberReplaced').to.have.equal(3);
+        expect(split2).to.have.property('length').to.have.equal(34);
     });
 })
