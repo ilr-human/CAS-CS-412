@@ -7,18 +7,11 @@ const lambda2 = (str) => {
     console.log(`originalString: ${originalString}`);
     const modifiedString = str.replace(/a/g, 'A');
     console.log(`modifiedString: ${modifiedString}`)
-    var counter = 0;
-    for (i = 0; i < str.length; i ++){
-        if (str.charAt(i) == 'a'){
-            counter ++;
-        }
-    }
-    const numberReplaced = counter;
+    const numberReplaced = str.replace(/[^a]/g, "").length;
     console.log(`numberReplaced: ${numberReplaced}`)
     const length = str.length;
     console.log(`length: ${str.length}`)
     return [originalString, modifiedString, numberReplaced, length];
 }
-
 
 module.exports = {splitter, lambda1, lambda2};
