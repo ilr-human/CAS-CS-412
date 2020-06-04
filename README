@@ -1,1 +1,5 @@
 Isabella Rocha's repository for CAS CS 412 (Summer I)
+
+'PS2.P1.TEST.js' contains the test cases using mocha/chai for 'PS2.P1.js'
+'PS2.P2.TEST.js' contains the test cases using mocha/chai for 'PS2.P2.js'
+'PS2.P3.TEST.js' contains the test cases using mocha/chai for 'PS2.P3.js'
