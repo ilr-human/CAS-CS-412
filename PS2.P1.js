@@ -33,5 +33,3 @@ while(!output.done){
     console.log(`Output: ${output.value}`);
     output = even.next();
 }
-
-module.exports = {F};
