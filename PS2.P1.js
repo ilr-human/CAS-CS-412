@@ -9,7 +9,7 @@ function * F (n) {
 }
 
 let array = [];
-const fibonacci = F(4);
+const fibonacci = F(6);
 let result = fibonacci.next();
 while(!result.done){
     console.log(`Result: ${result.value}`);
