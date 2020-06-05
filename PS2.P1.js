@@ -1,35 +1,35 @@
 function * F (n) {
-    const isInfinite = n === undefined;
-    let current = 0;
-    let next = 1;
-    while (isInfinite || n--) {
-        yield current;
-        [current, next] = [next, current + next];
+    let [val1, val2, result] = [1,1,0];
+    yield 0;
+    yield 1;
+    yield 1;
+    while (true){
+        result = val1 + val2;
+        [val1, val2] = [val2, result];
+        yield result;
     }
 }
 
-let array = [];
-const fibonacci = F(6);
+function * E (n){
+    while (true){
+        let even = fibonacci.next().value;
+        while (even % 2 != 0){
+            even = fibonacci.next().value;
+        }
+        yield even;
+    }
+}
+
+const fibonacci = F();
+const even = E();
 let result = fibonacci.next();
-while(!result.done){
-    console.log(`Result: ${result.value}`);
-    array.push(result.value);
+let count = 6;
+let Fib = [];
+let Even = []
+while(count --> 0){
+    Fib.push(result.value);
+    Even.push(even.next().value);
     result = fibonacci.next();
 }
-
-function * E (array){
-    let current = 0;
-    while(current < array.length){
-        if (array[current] % 2 == 0){
-            yield array[current];
-        }
-        current = current + 1;
-    }
-}
-
-const even = E(array);
-let output = even.next();
-while(!output.done){
-    console.log(`Output: ${output.value}`);
-    output = even.next();
-}
+console.log(`first 6 fibonacci numbers: ${Fib}`);
+console.log(`first 6 even fibonacci numbers: ${Even}`);
