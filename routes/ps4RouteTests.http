@@ -1,0 +1,4 @@
+GET http://localhost:3000/ps4/ps4Route
+Accept: application/json
+
+###
