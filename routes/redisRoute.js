@@ -4,23 +4,23 @@ const router = express.Router();
 const redisRoute = require ('redis');
 const client = redisRoute.createClient();
 
-router.get('/find/:name', (req, res, next) => {
-    const name = req.params.country;
+router.get('/find/:country', (req, res, next) => {
+    const country = req.params.country;
 
-    client.exists(name, (err, response) => {
+    client.exists(country, (err, response) => {
         if (err){
             throw new Error(err);
         }
         if (response == 1){ //key exists: grabs value
-            client.get(name, (err, response) => {
+            client.get(country, (err, response) => {
                 console.table(response);
                 res.send(JSON.stringify(response + 'not in cache'));
             })
         }
         else{
-            const reversedName = name.split('').sort().join('');
-            //reversed string using array
-            client.set(name, reversedName, 'EX', 30, (err, response) => {
+            const countryJoined = country.split('').join('');
+            //joins with array
+            client.set(country, countryJoined, 'EX', 30, (err, response) => {
                 //reversedName = value, name = key
                 console.table(response);
                 res.send(JSON.stringify(response + 'cached'));
