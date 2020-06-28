@@ -8,6 +8,6 @@
 </div>
 
 <div name = "enteringCountry" *ngIf="selectedCountry">
-  <input name = "confirmed" type = "number" value = "{{selectedCountry.confirmed}}">
-  <input name = "deaths" type = "number" value = "{{selectedCountry.deaths}}">
+  <input name = "confirmed" type = "any" value = "confirmed: {{selectedCountry.confirmed}}">
+  <input name = "deaths" type = "any" value = "deaths: {{selectedCountry.deaths}}">
 </div>
