@@ -1,25 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import { CovidComponent } from './covid.component';
+import { CovidServiceService} from './covid-service.service';
 
-describe('CovidComponent', () => {
-  let component: CovidComponent;
-  let fixture: ComponentFixture<CovidComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ CovidComponent ]
-    })
-    .compileComponents();
-  }));
+describe('CovidServiceService', () => {
+  let service: CovidServiceService;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CovidComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(CovidServiceService);
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should be created', () => {
+    expect(service).toBeTruthy();
   });
 });
