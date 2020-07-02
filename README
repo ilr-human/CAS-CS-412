@@ -1,3 +1,5 @@
 Isabella Rocha's repository for CAS CS 412 (Summer I)
 
 The web app only displayed the correct results when fetching data from the API with 'cross-origin restrictions' disabled
+
+NOTE: when running the programming where you are fetching from the API there will sometimes be 0 cases reported for that country. This is normal due to the fact that the API returns the current day's cases.
