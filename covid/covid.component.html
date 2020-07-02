@@ -3,11 +3,13 @@
   <button type = "submit" *ngIf = "statusFormGroup.value.countryCode"> submit </button>
   <br/>
   <br/>
+  <div *ngIf = "statusFormGroup.value.countryCode">
   TODAY'S CASES:
   <br/>
   confirmed: {{currentConfirmedAPI}}
   <br/>
   deaths: {{currentDeathsAPI}}
+  </div>
 </form>
 
 <div name = "countryList">
