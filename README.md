@@ -1,5 +1,7 @@
-# CAS CS 412
+# 411 team 8
 
-repository for CAS CS 412
+Quan Pham, Chloe Pupaiboon, Benjamin Reichelt, Isabella Rocha, Gabriella Roman, Yutong Shen
 
-Each branch in this repository contains my successfully completed problem sets. 
+To start the app: npm start 
+
+The app is hosted on: http://localhost:3000/
